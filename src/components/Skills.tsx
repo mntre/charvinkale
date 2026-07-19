@@ -1,5 +1,6 @@
 import { skillCategories } from "@/data/skills";
 import SectionHeading from "./SectionHeading";
+import TechBadge from "./TechBadge";
 
 export default function Skills() {
   return (
@@ -17,12 +18,7 @@ export default function Skills() {
             </h3>
             <div className="mt-4 flex flex-wrap gap-2">
               {group.skills.map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-md border border-surface-border bg-background px-2.5 py-1 font-mono text-xs text-slate-200"
-                >
-                  {skill}
-                </span>
+                <TechBadge key={skill} name={skill} />
               ))}
             </div>
           </div>

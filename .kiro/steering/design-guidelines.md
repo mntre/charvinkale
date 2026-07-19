@@ -67,8 +67,10 @@ top nav. Sections in order:
   keep transitions short (150–250ms), avoid bouncy easing.
 - Nav: sticky, blurred/translucent background on scroll (`backdrop-blur`), active
   section highlight.
-- Icons: use a consistent icon set (e.g. `lucide-react`) for socials, tech, and
-  section markers.
+- Icons: use `lucide-react` for interface actions and section markers; use
+  `react-icons` brand marks for technologies. Technology badges should retain the
+  portfolio's restrained dark styling while using recognizable brand colors on
+  the icon only, with a generic accessible fallback when no official mark exists.
 - Responsive: mobile-first. Stack sections vertically, collapse nav into a
   simple menu, ensure skill tags and project cards wrap cleanly.
 
