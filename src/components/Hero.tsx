@@ -29,6 +29,7 @@ export default function Hero() {
           </a>
           <a
             href="/resume/resume.pdf"
+            download="Charvin-Kale-Penaverde-Resume.pdf"
             className="flex items-center gap-2 rounded-lg border border-surface-border px-5 py-2.5 text-sm font-semibold text-slate-100 transition-colors hover:border-accent hover:text-accent"
           >
             <FileDown size={16} aria-hidden="true" />
