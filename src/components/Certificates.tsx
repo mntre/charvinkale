@@ -26,14 +26,21 @@ export default function Certificates() {
               key={cert.title}
               className="group overflow-hidden rounded-lg border border-surface-border bg-surface transition-all duration-200 hover:-translate-y-1 hover:border-accent/50"
             >
-              <div className="relative aspect-[4/3] w-full bg-background">
+              <a
+                href={cert.image}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Open ${cert.title} certificate at full size`}
+                className="relative block aspect-[4/3] w-full overflow-hidden bg-slate-100"
+              >
                 <Image
                   src={cert.image}
                   alt={`${cert.title} certificate issued by ${cert.issuer}`}
                   fill
-                  className="object-cover"
+                  sizes="(min-width: 640px) 33vw, 100vw"
+                  className="object-contain p-2 transition-transform duration-200 group-hover:scale-[1.02]"
                 />
-              </div>
+              </a>
               <div className="p-4">
                 <p className="text-sm font-semibold text-slate-100">
                   {cert.title}

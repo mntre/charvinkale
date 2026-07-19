@@ -93,9 +93,32 @@ then propagate changes into the actual site components.
 ## Resume & Certificates
 
 - Resume PDF should be placed at: `public/resume/` (see README in that folder).
-- Certificates (Atlassian, AWS, Python, etc.) should be placed at: `public/certificates/`
-  (see README in that folder). Each certificate should ideally have a matching entry
-  added to a `certificates` data list in the site so it renders as a card/gallery item.
+- Certificates are stored in `public/certificates/` and rendered from
+  `src/data/certificates.ts`.
+
+### Published Certificates
+
+1. `cert1.jpg` — Atlassian IT Service Management (ITSM) Professional Certificate
+   - Issuer: LinkedIn Learning + Atlassian
+   - Date: July 29, 2025
+2. `cert2.jpg` — Complete Guide to Jira Administration: Configuration, Management, and Automation
+   - Issuer: LinkedIn Learning
+   - Date: July 25, 2025
+3. `cert3.jpg` — Atlassian Credentialed in Forge Fundamentals
+   - Issuer: Atlassian
+   - Date: March 11, 2026
+4. `cert4.jpg` — Atlassian Credentialed in Rovo Fundamentals
+   - Issuer: Atlassian
+   - Date: March 13, 2026
+5. `cert5.jpg` — Atlassian Credentialed in Loom Fundamentals
+   - Issuer: Atlassian
+   - Date: March 18, 2026
+6. `cert6.jpg` — Agile Foundations
+   - Issuer: LinkedIn Learning
+   - Date: March 10, 2026
+7. `cert7.jpg` — Atlassian Agile Project Management Professional Certificate
+   - Issuer: LinkedIn Learning + Atlassian
+   - Date: March 26, 2026
 
 ## Open Items / To Confirm With Charvin
 
@@ -103,4 +126,3 @@ then propagate changes into the actual site components.
 - [ ] Live Vercel URL + GitHub repo link for CV Screener
 - [ ] Whether phone number should be publicly displayed on the site (recommend
       email + LinkedIn only, keep phone available via a contact form instead)
-- [ ] List of specific certificate file names once uploaded
