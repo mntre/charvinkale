@@ -1,0 +1,257 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  contain: strict;
+  background:
+    radial-gradient(circle at 12% 18%, rgb(34 211 238 / 0.07), transparent 30%),
+    radial-gradient(circle at 88% 72%, rgb(14 116 144 / 0.08), transparent 34%);
+}
+
+.grid,
+.nodes,
+.orb,
+.scan,
+.terminal,
+.token {
+  position: absolute;
+}
+
+.grid {
+  inset: -4rem;
+  background-image:
+    linear-gradient(rgb(34 211 238 / 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(34 211 238 / 0.045) 1px, transparent 1px);
+  background-size: 4rem 4rem;
+  mask-image: linear-gradient(to bottom, transparent, black 14%, black 86%, transparent);
+  animation: grid-drift 52s linear infinite;
+  will-change: transform;
+}
+
+.nodes {
+  inset: -4rem;
+  background-image: radial-gradient(
+    circle,
+    rgb(103 232 249 / 0.2) 1px,
+    transparent 1.5px
+  );
+  background-size: 4rem 4rem;
+  mask-image: radial-gradient(ellipse at center, black 12%, transparent 72%);
+  opacity: 0.5;
+  animation: nodes-drift 64s linear infinite;
+  will-change: transform;
+}
+
+.orb {
+  width: 34rem;
+  height: 34rem;
+  border-radius: 9999px;
+  opacity: 0.65;
+  will-change: transform;
+}
+
+.orbOne {
+  top: 6vh;
+  left: -19rem;
+  background: radial-gradient(circle, rgb(34 211 238 / 0.11), transparent 68%);
+  animation: orb-one 38s ease-in-out infinite;
+}
+
+.orbTwo {
+  right: -20rem;
+  bottom: 2vh;
+  background: radial-gradient(circle, rgb(8 145 178 / 0.1), transparent 68%);
+  animation: orb-two 46s ease-in-out infinite;
+}
+
+.scan {
+  top: -28vh;
+  right: 0;
+  left: 0;
+  height: 24vh;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgb(34 211 238 / 0.035) 48%,
+    rgb(103 232 249 / 0.07) 50%,
+    rgb(34 211 238 / 0.035) 52%,
+    transparent
+  );
+  animation: scan-page 24s linear infinite;
+  will-change: transform, opacity;
+}
+
+.terminal {
+  top: 12%;
+  right: 5%;
+  display: none;
+  width: 13rem;
+  gap: 0.2rem;
+  padding: 0.7rem 0.85rem;
+  border: 1px solid rgb(34 211 238 / 0.16);
+  border-radius: 0.5rem;
+  color: rgb(148 163 184 / 0.24);
+  background: rgb(15 23 42 / 0.16);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.68rem;
+  line-height: 1.4;
+  animation: terminal-float 34s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.terminal span {
+  display: block;
+}
+
+.terminalBar {
+  margin-bottom: 0.2rem;
+  color: rgb(103 232 249 / 0.26);
+  font-size: 0.52rem;
+  letter-spacing: 0.12em;
+}
+
+.success {
+  color: rgb(103 232 249 / 0.3);
+}
+
+.token {
+  display: none;
+  color: rgb(103 232 249 / 0.18);
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: clamp(0.68rem, 0.9vw, 0.82rem);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  animation: token-float 30s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.tokenOne {
+  top: 25%;
+  left: 5%;
+}
+
+.tokenTwo {
+  top: 46%;
+  right: 4%;
+  animation-delay: -9s;
+}
+
+.tokenThree {
+  top: 68%;
+  left: 7%;
+  animation-delay: -18s;
+}
+
+.tokenFour {
+  right: 6%;
+  bottom: 9%;
+  animation-delay: -24s;
+}
+
+@media (min-width: 768px) {
+  .token {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .terminal {
+    display: grid;
+  }
+}
+
+@keyframes grid-drift {
+  from {
+    transform: translate3d(-4rem, -4rem, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes nodes-drift {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-4rem, 4rem, 0);
+  }
+}
+
+@keyframes orb-one {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(9rem, 5rem, 0) scale(1.12);
+  }
+}
+
+@keyframes orb-two {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(-8rem, -6rem, 0) scale(1.1);
+  }
+}
+
+@keyframes scan-page {
+  0% {
+    transform: translate3d(0, -10vh, 0);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.65;
+  }
+  88% {
+    opacity: 0.65;
+  }
+  100% {
+    transform: translate3d(0, 138vh, 0);
+    opacity: 0;
+  }
+}
+
+@keyframes terminal-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate3d(-1.25rem, 1.75rem, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes token-float {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0.55;
+  }
+  50% {
+    transform: translate3d(1.5rem, -1rem, 0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grid,
+  .nodes,
+  .orb,
+  .terminal,
+  .token {
+    animation: none;
+    transform: none;
+  }
+
+  .scan {
+    display: none;
+  }
+}
