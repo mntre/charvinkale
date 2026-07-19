@@ -44,8 +44,11 @@ Follow this consistently across all components so the site feels cohesive and
 Single-page scrolling layout (standard for portfolios, easy to scan) with sticky
 top nav. Sections in order:
 
-1. **Hero** — Name, title, one-line value prop, primary CTAs (View Projects,
-   Download Resume, Contact), social icons (GitHub, LinkedIn, Email).
+1. **Hero** — Responsive two-column layout with name, title, one-line value prop,
+   primary CTAs (View Projects, Download Resume, Contact), social icons (GitHub,
+   LinkedIn, Email), and Charvin's portrait from `/images/prof.png`. Use a restrained
+   4:5 rounded-rectangle frame with a subtle cyan border/glow and right-biased image
+   focal point; stack cleanly on mobile.
 2. **About** — Short bio, education (SPCBA + Stanford Code in Place), current role.
 3. **Skills** — Grouped by category (Languages / Frameworks / Cloud & Platforms),
    rendered as tags/badges, monospace font for tag text.

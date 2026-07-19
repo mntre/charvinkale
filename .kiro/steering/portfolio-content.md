@@ -13,6 +13,7 @@ then propagate changes into the actual site components.
 
 - **Full name:** Charvin Kale M. Peñaverde
 - **Title:** Jira & SAP SuccessFactors Developer / Full Stack Developer
+- **Profile image:** `/images/prof.png` (stored at `public/images/prof.png`)
 - **Hero tagline:** I build business-focused software that transforms complex workflows into reliable systems—from Atlassian and SAP SuccessFactors solutions to organization-wide full-stack applications.
 - **Email:** charvinpe08@gmail.com
 - **Phone:** Private — intentionally excluded from the public portfolio repository
